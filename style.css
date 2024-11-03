@@ -352,6 +352,39 @@ main section {
 }
 
 #experience {
+  max-width: 100vw;
+  transform: translateY(0%) translateZ(0px);
+  width: 100%;
   margin-bottom: 5000px;
+}
+
+.experienceSingle h3 {
+  z-index: 1;
+  position: relative;
+  font-size: calc(1rem + ((1vw - 7.68px) * 2));
+
+}
+
+.experienceSingle h3 span {
+  color: rgb(60, 207, 145);
+}
+
+.experienceDescription ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.experienceDescription ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+.experienceDescription ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #3ccf91;
 }
 
