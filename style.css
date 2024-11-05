@@ -359,7 +359,6 @@ main section {
   max-width: 100vw;
   transform: translateY(0%) translateZ(0px);
   width: 100%;
-  margin-bottom: 5000px;
 }
 
 .experienceSingle {
@@ -405,4 +404,106 @@ main section {
   position: absolute;
   left: 0px;
   color: #3ccf91;
+}
+
+
+/* blog section */
+#blogs {
+  display: flex;
+  align-items: flex-start;
+  -moz-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blogList {
+  margin-top: 2rem;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.singleBlog {
+  display: flex;
+  align-items: flex-start;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 20px
+}
+
+.blogTimeline {
+  width: 130px;
+  text-align: right;
+  color: #8f9094;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.blogDetails {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 2.5rem;
+  padding-inline-end: 2.5rem;
+}
+
+.blogTitle {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.blogInfo {
+  font-size: 0.875rem;
+  color: #8f9094;
+}
+
+.blogLink {
+  color: #3ccf91;
+}
+
+.contact {
+  margin-top: 10px;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactTitle {
+  opacity: 1;
+  transform: none;
+}
+
+.contactTitle h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.contactSubtitle {
+  opacity: 1;
+  transform: none;
+}
+
+.contactSubtitle p {
+  color: #8f9094;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.contactButton {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 144px;
 }
