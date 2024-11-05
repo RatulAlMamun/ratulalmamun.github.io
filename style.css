@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: rgba(255, 255, 255, 0.92);
   background: #000;
   -webkit-transition: background-color 0.2s;
@@ -80,7 +80,8 @@ a {
 }
 
 #navbar nav a p {
-  color: #ffffff;;
+  color: #ffffff;
+  ;
   font-size: 32px;
   font-weight: 700;
   cursor: pointer;
@@ -93,7 +94,8 @@ a {
 }
 
 #menubar {
-  margin-right: 1.75rem;;
+  margin-right: 1.75rem;
+  ;
   color: #ffffff;
 }
 
@@ -119,7 +121,8 @@ a {
   font-size: 16px;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
-  color: rgba(255, 255, 255, 0.92);;
+  color: rgba(255, 255, 255, 0.92);
+  ;
   padding: 1rem;
 }
 
@@ -295,7 +298,7 @@ main section {
   margin-inline-end: 0.5rem;
 }
 
-.socialButton > :not(style) ~ :not(style) {
+.socialButton> :not(style)~ :not(style) {
   margin-inline-start: 16px;
 }
 
@@ -311,6 +314,7 @@ main section {
   transform: translateY(0%) translateZ(0px);
   width: 100%;
 }
+
 .container {
   width: 85%;
   margin-inline: auto;
@@ -358,6 +362,10 @@ main section {
   margin-bottom: 5000px;
 }
 
+.experienceSingle {
+  padding: 30px 0px;
+}
+
 .experienceSingle h3 {
   z-index: 1;
   position: relative;
@@ -369,10 +377,21 @@ main section {
   color: rgb(60, 207, 145);
 }
 
+.experienceDescription {
+  margin-top: 15px;
+
+}
+
+.experienceDescription a {
+  margin-top: 15px;
+  color: #3ccf91;
+}
+
 .experienceDescription ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
+  color: #8f9094;
 }
 
 .experienceDescription ul li {
@@ -387,4 +406,3 @@ main section {
   left: 0px;
   color: #3ccf91;
 }
-
