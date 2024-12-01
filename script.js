@@ -9,6 +9,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // API URL
 const apiUrl = 'https://dev.to/api/articles?username=ratulalmamun';
+const vistCountWorkerUrl = 'https://protfolio-worker.ratulalmamun23.workers.dev';
 
 async function fetchData() {
   try {
@@ -18,6 +19,7 @@ async function fetchData() {
     }
     const data = await response.json();
     displayData(data);
+    updateVisitorStats();
   } catch (error) {
     console.error('Error fetching data:', error);
   }
@@ -45,21 +47,17 @@ function displayData(data) {
   });
 }
 
+async function updateVisitorStats() {
+  try {
+    const response = await fetch(vistCountWorkerUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    document.getElementById("total-visits").textContent = data.visitCount || 0;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
 window.onload = fetchData;
-
-
-
-
-/* <div class="singleBlog">
-          <div class="blogTimeline">
-            <p>Apr 2 2024</p>
-            <p class="small">3 min read</p>
-          </div>
-          <div class="blogDetails">
-            <a href="" target="_blank">
-              <p class="blogTitle">Unleash Your Dev Blog: Write More with GitHub Issues as Your CMS</p>
-              <p class="blogInfo">Published: 5 October 2024 | Comment: 1 | Reaction: 5</p>
-              <p class="blogLink">Learn more →</p>
-            </a>
-          </div>
-        </div> */
