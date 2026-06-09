@@ -26,8 +26,12 @@ async function fetchData() {
 }
 
 function displayData(data) {
-  const container = document.getElementById('data-container');
+  const container = document.getElementById('blog-data-container');
   data.forEach(item => {
+    const editedInfo = item.edited_at
+      ? new Date(item.edited_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      : new Date(item.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
     const singleBlog = document.createElement('div');
     singleBlog.className = 'singleBlog';
     singleBlog.innerHTML = `
@@ -38,7 +42,7 @@ function displayData(data) {
       <div class="blogDetails">
         <a href="${item.url}" target="_blank">
           <p class="blogTitle">${item.title}</p>
-          <p class="blogInfo">Edited: ${new Date(item.edited_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} | Comment: ${item.comments_count} | Reaction: ${item.public_reactions_count}</p>
+          <p class="blogInfo">Edited: ${editedInfo} | Comment: ${item.comments_count} | Reaction: ${item.public_reactions_count}</p>
           <p class="blogLink">Learn more →</p>
         </a>
       </div>
